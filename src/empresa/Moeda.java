@@ -3,6 +3,18 @@ package empresa;
 public abstract class Moeda {
 	double valor;
 
+	public Moeda(double valor) {
+		this.valor = valor;
+	}
+
+	public Moeda() {
+
+	}
+
+	@Override
+	public String toString() {
+		return "Moeda [valor=" + valor + "]";
+	}
 
 	public double getValor() {
 		return valor;
@@ -13,12 +25,11 @@ public abstract class Moeda {
 	}
 
 	public void info() {
-		
+
 	}
-	
-	public double converter() {
+
+	public double converter(double valor) {
 		return valor;
-		
 	}
 
 }

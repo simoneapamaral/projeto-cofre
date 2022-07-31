@@ -1,13 +1,17 @@
 package empresa;
 
-public class Real extends Moeda{
-	
-	public void info() {
-		
+public class Real extends Moeda {
+
+	public Real() {
+
 	}
 
-	public double converter() {
+	public void info() {
+
+	}
+
+	public double converter(double valors) {
 		return valor;
-		
+
 	}
 }
