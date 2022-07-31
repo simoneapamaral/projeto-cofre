@@ -18,16 +18,14 @@ public class Cofrinho {
 		this.moedas = moeda;
 	}
 
-	public void remover(Moeda n) {
+	public void remover(Moeda n) {  
 		moedas.remove(n);
 	}
 
 	public double totalConvertido() {
 		double total = 0;
 		for (Moeda m : moedas) {
-			total += m.getValor(); // pegar valor da moeda e incrementar com o total
-			// if dolar * cotação dolar
-			// else if euro * cotação do euro
+			total += m.getValor(); 
 		}
 		return total;
 	}
@@ -39,5 +37,17 @@ public class Cofrinho {
 	public void setMoedas(ArrayList<Moeda> moedas) {
 		this.moedas = moedas;
 	}
+	
+	
+	
+	public void imprimirMoedas() {
+		for (Moeda m : moedas) {
+			System.out.println("Moeda : " + m );
+		}
+
+	}
+	
+	
+	
 
 }

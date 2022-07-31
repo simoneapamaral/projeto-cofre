@@ -10,7 +10,14 @@ public class Real extends Moeda {
 
 	}
 
-	public double converter(double valors) {
+	
+	@Override
+	public String toString() {
+		return "Real";
+	}
+
+	@Override
+	public double converter(double valor) {
 		return valor;
 
 	}
