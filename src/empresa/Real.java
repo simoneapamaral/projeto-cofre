@@ -13,7 +13,7 @@ public class Real extends Moeda {
 	
 	@Override
 	public String toString() {
-		return "Real";
+		return valor + " Reais";
 	}
 
 	@Override

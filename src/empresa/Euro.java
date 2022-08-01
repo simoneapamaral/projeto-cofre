@@ -2,21 +2,18 @@ package empresa;
 
 public class Euro extends Moeda {
 
-	
-	
 	public Euro() {
 	}
 
 	public Euro(double valor) {
 		super(valor);
-		
+
 	}
 
 	public void info() {
 
 	}
 
-	
 	@Override
 	public double converter(double valor) {
 		return valor * 10;
@@ -25,10 +22,7 @@ public class Euro extends Moeda {
 
 	@Override
 	public String toString() {
-		return "Euro";
+		return valor + " Euros";
 	}
-	
-	
-	
-	
+
 }

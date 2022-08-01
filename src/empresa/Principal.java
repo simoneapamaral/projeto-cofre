@@ -10,14 +10,15 @@ public class Principal {
 		int opcao;
 		int opcaoDois;
 		double valorLido;
-		
+		int moedaLido;
+
 		Scanner teclado = new Scanner(System.in);
 		Cofrinho cofrinho = new Cofrinho();
+		Cofrinho cofrinhoReal = new Cofrinho();
 		ArrayList<Moeda> moedas = new ArrayList<Moeda>();
-		
 
 		do {
-			
+
 			menuUm();
 
 			opcao = teclado.nextInt();
@@ -29,83 +30,88 @@ public class Principal {
 				menuDois();
 
 				opcaoDois = teclado.nextInt();
-				
+
 				if (opcaoDois == 1) {
 					Dolar dolar = new Dolar();
-					
 					System.out.println("Digite valor em Dolar:");
-					valorLido =  teclado.nextInt();
-					
-					dolar.setValor(dolar.converter(valorLido));
+					valorLido = teclado.nextInt();
+					dolar.setValor(valorLido);
 					moedas.add(dolar);
 					cofrinho.adicionar(moedas);
 					
-					
-				}
-				else if (opcaoDois == 2) {
+
+				} else if (opcaoDois == 2) {
 					Euro euro = new Euro();
-					
+
 					System.out.println("Digite valor em Euro:");
-					valorLido =  teclado.nextInt();
-					
-					euro.setValor(euro.converter(valorLido));
+					valorLido = teclado.nextInt();
+
+					euro.setValor(valorLido);
 					moedas.add(euro);
 					cofrinho.adicionar(moedas);
-					}
-				else if (opcaoDois == 3) {
+					
+				} else if (opcaoDois == 3) {
 					Real real = new Real();
-					
+
 					System.out.println("Digite valor em Real:");
-					valorLido =  teclado.nextInt();
-					
-					real.setValor(real.converter(valorLido));
+					valorLido = teclado.nextInt();
+
+					real.setValor(valorLido);
 					moedas.add(real);
 					cofrinho.adicionar(moedas);
 
-					}
-				else if(opcaoDois == 0) {
+				} else if (opcaoDois == 0) {
 					System.out.println("Retornando ao Menu Principal...");
 					System.out.println();
-					}
-				else {
+				} else {
 					System.out.println("Opcao invalida!");
 					System.out.println();
-					}
+				}
 			}
-			
+
 			else if (opcao == 2) { // Remover Moeda
 				System.out.println("°°°°°°°°°°°°° Remover Moedas °°°°°°°°°°°°°");
-				System.out.println();
+				System.out.println("Digite o indice da moeda que deseja remover: ");
 				
+				for (int i = 0; i < moedas.size(); i++) {
+					System.out.println("Indice: " + i +" -> " + moedas.get(i) );
+				}
+				
+				
+				
+				
+				moedaLido = teclado.nextInt();
+				cofrinho.remover(moedaLido);
+				System.out.println();
 
 			}
-			
-			else if (opcao == 3) { //Listar todas as moedas
+
+			else if (opcao == 3) { // Listar todas as moedas
 				System.out.println("°°°°°°°°°°°°° Listar Moedas °°°°°°°°°°°°°");
 				System.out.println();
 				cofrinho.imprimirMoedas();
 				System.out.println();
 			}
 			
-			else if (opcao == 4) { // Calcular quanto dinheiro existe no cofrinho convertido para Real
+			// Calcular quanto dinheiro existe no cofrinho convertido para Real
+			else if (opcao == 4) {
 				System.out.println("°°°°°°°°°°°°° Total no Cofrinho °°°°°°°°°°°°°");
 				System.out.println();
-				System.out.println("Valor total no cofrinho convertido em Real: " + cofrinho.totalConvertido());
+				System.out.println("Valor total no cofrinho convertido em Reais: " + cofrinho.totalConvertido());
 				System.out.println();
 			}
 
 			else if (opcao == 0) {
 				System.out.println("Programa encerrado.");
 			}
-			
+
 			else {
 				System.out.println();
 				System.out.println("Opcao invalida!");
 			}
 
 		} while (opcao != 0);
-		
-	
+
 	}
 
 	private static void menuUm() {

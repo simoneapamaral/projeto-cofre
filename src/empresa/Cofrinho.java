@@ -13,19 +13,22 @@ public class Cofrinho {
 	public Cofrinho() {
 
 	}
+	
+
 
 	public void adicionar(ArrayList<Moeda> moeda) {
 		this.moedas = moeda;
 	}
 
-	public void remover(Moeda n) {  
-		moedas.remove(n);
+	public void remover(int moeda) {
+		moedas.remove(moeda);
+
 	}
 
 	public double totalConvertido() {
 		double total = 0;
 		for (Moeda m : moedas) {
-			total += m.getValor(); 
+			total += m.getValor();
 		}
 		return total;
 	}
@@ -36,18 +39,17 @@ public class Cofrinho {
 
 	public void setMoedas(ArrayList<Moeda> moedas) {
 		this.moedas = moedas;
+		
 	}
-	
-	
-	
+
 	public void imprimirMoedas() {
-		for (Moeda m : moedas) {
-			System.out.println("Moeda : " + m );
+		if(moedas.size() == 0) {
+			System.out.println("Ooops!\nCofrinho vazio :(");
+		}
+		for (int i = 0; i < this.moedas.size(); i++) {
+			System.out.println(this.moedas.get(i));
 		}
 
 	}
-	
-	
-	
 
 }

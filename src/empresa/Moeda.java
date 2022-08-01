@@ -17,10 +17,13 @@ public abstract class Moeda {
 	}
 
 	public double getValor() {
-		return valor;
+		return converter(valor); 
 	}
 
 	public void setValor(double valor) {
+		if(valor <=0) {
+			System.out.println("Valor invalido!\nDigite um valor maior que zero.\n");
+		}
 		this.valor = valor;
 	}
 
@@ -28,7 +31,7 @@ public abstract class Moeda {
 
 	}
 
-	public double converter(double valor) {
+    public double converter(double valor) {
 		return valor;
 	}
 
