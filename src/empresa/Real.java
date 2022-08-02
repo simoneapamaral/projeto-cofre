@@ -7,6 +7,9 @@ public class Real extends Moeda {
 	}
 
 	public void info() {
+		System.out.println();
+		System.out.println(valor + " Reais adicionado no cofrinho com sucesso!");
+		System.out.println();
 
 	}
 

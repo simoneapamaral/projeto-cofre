@@ -10,12 +10,7 @@ public abstract class Moeda {
 	public Moeda() {
 
 	}
-
-	@Override
-	public String toString() {
-		return "Moeda [valor=" + valor + "]";
-	}
-
+	
 	public double getValor() {
 		return converter(valor); 
 	}
@@ -27,7 +22,10 @@ public abstract class Moeda {
 		this.valor = valor;
 	}
 
-	public void info() {
+	public void info() { // tem que imprimir algo??????
+		System.out.println();
+		System.out.println("Valor informado: " + valor );
+		System.out.println();
 
 	}
 

@@ -11,6 +11,9 @@ public class Dolar extends Moeda {
 	}
 
 	public void info() {
+		System.out.println();
+		System.out.println(valor + " Dolares adicionado no cofrinho com sucesso!");
+		System.out.println();
 
 	}
 
