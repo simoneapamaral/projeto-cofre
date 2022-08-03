@@ -4,15 +4,13 @@ import java.util.ArrayList;
 
 public class Cofrinho { // Classe Cofrinho
 
-	private ArrayList<Moeda> moedas = new ArrayList<Moeda>();
+	private ArrayList<Moeda> moedas = new ArrayList<Moeda>(); // Array de moedas
 
-	public Cofrinho(ArrayList<Moeda> moedas) {
+	public Cofrinho(ArrayList<Moeda> moedas) { // construtor da classe Cofrinho que recebe moedas do array moedas
 		this.moedas = moedas;
 	}
 
-	public Cofrinho() {
-
-	}
+	public Cofrinho() {} // construtor vazio
 	
     // método para adicionar moedas 
 	public void adicionar(ArrayList<Moeda> moeda) {
@@ -27,6 +25,7 @@ public class Cofrinho { // Classe Cofrinho
 	
 	// método para listar moedas que estão no cofrinho
 	public void listagemMoedas() {
+		// se cofrinho vazio imprime mensagem
 		if(moedas.size() == 0) {
 			System.out.println("Ooops!\nCofrinho vazio :(");
 		}
@@ -45,11 +44,11 @@ public class Cofrinho { // Classe Cofrinho
 		return total;
 	}
 
-	public ArrayList<Moeda> getMoedas() {
+	public ArrayList<Moeda> getMoedas() { // pega a moeda
 		return moedas;
 	}
 
-	public void setMoedas(ArrayList<Moeda> moedas) {
+	public void setMoedas(ArrayList<Moeda> moedas) { // define a moeda
 		this.moedas = moedas;
 		
 	}

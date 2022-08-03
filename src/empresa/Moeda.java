@@ -1,35 +1,35 @@
 package empresa;
 
-public abstract class Moeda {
+public abstract class Moeda { // Classe Moeda classe mãe
 	double valor;
 
-	public Moeda(double valor) {
+	public Moeda(double valor) { // construtor classe Moeda 
 		this.valor = valor;
 	}
 
-	public Moeda() {
+	public Moeda() {} // construtor vazio
 
-	}
-	
-	public double getValor() {
-		return converter(valor); 
+	public double getValor() { // método get pega o valor
+		return converter(valor);
 	}
 
-	public void setValor(double valor) {
-		if(valor <=0) {
+	public void setValor(double valor) { // método set define o valor
+		// verifica se valor é maior que zero
+		if (valor <= 0) {
 			System.out.println("Valor invalido!\nDigite um valor maior que zero.\n");
 		}
 		this.valor = valor;
 	}
 
-	public void info() { // tem que imprimir algo??????
+	// metodo info imprime o valor informado que será adicionado ao cofrinho
+	public void info() { 
 		System.out.println();
-		System.out.println("Valor informado: " + valor );
-		System.out.println();
-
+		System.out.println("Valor informado: " + valor);
+		
 	}
 
-    public double converter(double valor) {
+	// método converter converte o valor da moeda em reais
+	public double converter(double valor) {
 		return valor;
 	}
 
