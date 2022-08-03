@@ -31,7 +31,7 @@ public class Euro extends Moeda { // Classe Euro classe filha
 	}
 
 	@Override
-	public String toString() {
+	public String toString() { // método toString irá imprimir o valor e a moeda
 		return valor + " Euros";
 	}
 

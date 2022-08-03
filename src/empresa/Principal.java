@@ -33,6 +33,13 @@ public class Principal { // Classe Principal
 					Dolar dolar = new Dolar();
 					System.out.println("\nDigite valor em Dolar:");
 					valorLido = teclado.nextDouble();
+					// enquanto valor for menor ou igual a zero será solicitado um valor maior que zero
+					while (valorLido <= 0) {
+						System.out.println("\nValor invalido!\nDigite um valor maior que zero.\n");
+						System.out.println("\nDigite valor em Dolar:");
+						valorLido = teclado.nextDouble();
+						
+					}
 					dolar.setValor(valorLido);
 					moedas.add(dolar);
 					// Trazendo o método info da classe moeda através do super declarado na classe Dolar
@@ -44,6 +51,13 @@ public class Principal { // Classe Principal
 					Euro euro = new Euro();
 					System.out.println("\nDigite valor em Euro:");
 					valorLido = teclado.nextDouble();
+					// enquanto valor for menor ou igual a zero será solicitado um valor maior que zero
+					while (valorLido <= 0) {
+						System.out.println("\nValor invalido!\nDigite um valor maior que zero.\n");
+						System.out.println("\nDigite valor em Euro:");
+						valorLido = teclado.nextDouble();
+						
+					}
 					euro.setValor(valorLido);
 					moedas.add(euro);
 					// Trazendo o método info da classe moeda através do super declarado na classe Euro
@@ -55,6 +69,13 @@ public class Principal { // Classe Principal
 					Real real = new Real();
 					System.out.println("\nDigite valor em Real:");
 					valorLido = teclado.nextDouble();
+					// enquanto valor for menor ou igual a zero será solicitado um valor maior que zero
+					while (valorLido <= 0) {
+						System.out.println("\nValor invalido!\nDigite um valor maior que zero.\n");
+						System.out.println("\nDigite valor em Real:");
+						valorLido = teclado.nextDouble();
+						
+					}
 					real.setValor(valorLido);
 					moedas.add(real);
 					// Trazendo o método info da classe moeda através do super declarado na classe Real
@@ -96,18 +117,16 @@ public class Principal { // Classe Principal
 				    	System.out.println("Indice invalido");
 						}
 				        // tratando exceção caso usuário informe índice inválido
-			  }         catch (Exception e) {
-				        System.out.println("Ocorreu um problema: " + e.getMessage());
+				    }         catch (Exception e) {
+				        System.out.println("\nOcorreu um problema: " + e.getMessage());
 					
 				}
 				finally {
-					System.out.println("Operacao finalizada!\nRetornando ao Menu Inicial...\n");
-					
+					System.out.println("\nOperacao finalizada!\nRetornando ao Menu Inicial...\n");
+					}
 				}
-					
-
+				
 			}
-				}
 		
 
 			// Opção 3 - Listar todas as moedas

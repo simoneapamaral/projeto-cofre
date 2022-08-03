@@ -23,7 +23,7 @@ public class Real extends Moeda { // Classe Real classe filha
 	}
 	
 	@Override
-	public String toString() {
+	public String toString() { // método toString irá imprimir o valor e a moeda 
 		return valor + " Reais";
 	}
 

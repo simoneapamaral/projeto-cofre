@@ -28,7 +28,7 @@ public class Dolar extends Moeda { // Classe Dolar classe filha
 	}
 
 	@Override
-	public String toString() {
+	public String toString() { // método toString irá imprimir o valor e a moeda
 		return valor + " Dolares";
 	}
 
